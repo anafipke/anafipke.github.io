@@ -55,13 +55,11 @@ window.CONTENT = {
         { label: "Entender como trabalho", to: "method" },
         { label: "Entrar em contato", to: "contact" }
       ],
-      visualCaption: "Passe o cursor: a estrutura absorve o ruído."
     },
     about: {
       title: "Sobre mim",
       intro: "Minha trajetória começou perto do usuário e foi, aos poucos, se aproximando do produto. Cada etapa acrescentou uma camada de entendimento: primeiro sobre pessoas, depois sobre qualidade, regras, tecnologia e, por fim, sobre como conduzir uma entrega do problema até o uso.",
       journeyTitle: "Trajetória",
-      journeyHint: "Selecione uma etapa",
       journey: [
         {
           area: "Suporte e relacionamento com clientes",
@@ -112,7 +110,6 @@ window.CONTENT = {
       directionTitle: "Para onde estou indo",
       directionText: "Quero aprofundar conhecimentos que complementam minha atuação como PO e me aproximam de Project Management e PMO:",
       direction: ["Gestão de projetos", "Governança", "Gestão de portfólio", "Indicadores e acompanhamento", "Melhoria contínua"],
-      directionNote: "São áreas em desenvolvimento, não experiências formais consolidadas.",
       educationTitle: "Formação e certificação",
       education: [
         { title: "Professional Scrum Product Owner (PSPO I)", detail: "Scrum.org" },
@@ -124,7 +121,6 @@ window.CONTENT = {
     work: {
       title: "Experiência e projetos",
       intro: "Quatro cases reais, contados pelo desafio, pelas decisões e pela forma como participei. Separo o que foi minha atuação do que foi entregue pela equipe.",
-      privacy: "Cases anonimizados: nomes de sistemas, clientes, dados operacionais e informações comerciais foram omitidos.",
       labels: {
         context: "Contexto",
         challenge: "Desafio",
@@ -137,8 +133,6 @@ window.CONTENT = {
       },
       roleTag: "Individual",
       teamTag: "Equipe",
-      teamNote: "Construído pela equipe do projeto.",
-      resultsNote: "Resultados construídos em equipe, descritos de forma qualitativa.",
       cases: [
         {
           id: "legacy",
@@ -446,7 +440,6 @@ window.CONTENT = {
         }
       ],
       toolsTitle: "Ferramentas",
-      toolsNote: "Listo apenas ferramentas com uso ou familiaridade confirmados.",
       tools: [
         ["Jira", "practice"],
         ["Notion", "practice"],
@@ -476,7 +469,6 @@ window.CONTENT = {
         services: [["gov"], ["gov"], ["fin", "gov"], ["fin"], ["adoption"], ["ops"]],
         digitization: [["ops", "gov"], ["ops"], ["gov"], ["tech", "ops"], ["fin"]]
       },
-      disclosure: "Sem números confidenciais: indicadores internos, valores e volumes não são divulgados. Os resultados são descritos de forma qualitativa e referem-se a efeitos já observados.",
       seeCase: "Ver case"
     },
     contact: {
@@ -540,13 +532,11 @@ window.CONTENT = {
         { label: "See how I work", to: "method" },
         { label: "Get in touch", to: "contact" }
       ],
-      visualCaption: "Hover over it: structure absorbs the noise."
     },
     about: {
       title: "About",
       intro: "My career started close to the user and gradually moved toward product. Each step added a layer of understanding: first about people, then quality, rules and technology, and finally about how to take a delivery from problem to adoption.",
       journeyTitle: "Career path",
-      journeyHint: "Select a stage",
       journey: [
         {
           area: "Customer support and success",
@@ -597,7 +587,6 @@ window.CONTENT = {
       directionTitle: "Where I am heading",
       directionText: "I want to deepen the knowledge that complements my work as a PO and brings me closer to Project Management and PMO:",
       direction: ["Project management", "Governance", "Portfolio management", "Metrics and monitoring", "Continuous improvement"],
-      directionNote: "These are areas I am developing, not established formal experience.",
       educationTitle: "Education and certification",
       education: [
         { title: "Professional Scrum Product Owner (PSPO I)", detail: "Scrum.org" },
@@ -609,7 +598,6 @@ window.CONTENT = {
     work: {
       title: "Experience & projects",
       intro: "Four real cases, told through the challenge, the decisions and how I took part. I separate my own contribution from what the team delivered.",
-      privacy: "Anonymized cases: system names, clients, operational data and commercial information have been omitted.",
       labels: {
         context: "Context",
         challenge: "Challenge",
@@ -622,8 +610,6 @@ window.CONTENT = {
       },
       roleTag: "Individual",
       teamTag: "Team",
-      teamNote: "Built by the project team.",
-      resultsNote: "Team results, described qualitatively.",
       cases: [
         {
           id: "legacy",
@@ -931,7 +917,6 @@ window.CONTENT = {
         }
       ],
       toolsTitle: "Tools",
-      toolsNote: "I only list tools I have confirmed hands-on use of or familiarity with.",
       tools: [
         ["Jira", "practice"],
         ["Notion", "practice"],
@@ -961,7 +946,6 @@ window.CONTENT = {
         services: [["gov"], ["gov"], ["fin", "gov"], ["fin"], ["adoption"], ["ops"]],
         digitization: [["ops", "gov"], ["ops"], ["gov"], ["tech", "ops"], ["fin"]]
       },
-      disclosure: "No confidential figures: internal metrics, amounts and volumes are not disclosed. Results are described qualitatively and refer to effects already observed.",
       seeCase: "View case"
     },
     contact: {

@@ -149,7 +149,7 @@
             routeLink(c.shortcuts[3].to, c.shortcuts[3].label, "btn btn--ghost")
           ])
         ]),
-        h("figure", { class: "hero__visual" }, [canvas, h("figcaption", null, c.visualCaption)])
+        h("figure", { class: "hero__visual" }, [canvas])
       ]),
       h("div", { class: "home-grid" }, [
         h("section", { class: "zone pillars", "aria-labelledby": "pillars-title" }, [
@@ -226,8 +226,7 @@
       header(c.title, c.intro),
       h("section", { class: "zone journey", "aria-labelledby": "journey-title" }, [
         h("div", { class: "zone__head" }, [
-          h("h2", { class: "zone__title", id: "journey-title" }, c.journeyTitle),
-          h("span", { class: "zone__hint" }, c.journeyHint)
+          h("h2", { class: "zone__title", id: "journey-title" }, c.journeyTitle)
         ]),
         track,
         panel
@@ -248,8 +247,7 @@
       h("section", { class: "zone direction", "aria-labelledby": "direction-title" }, [
         h("h2", { class: "zone__title", id: "direction-title" }, c.directionTitle),
         h("p", null, c.directionText),
-        h("ul", { class: "chips" }, c.direction.map(function (d) { return h("li", { class: "chip chip--learning" }, d); })),
-        h("p", { class: "note" }, c.directionNote)
+        h("ul", { class: "chips" }, c.direction.map(function (d) { return h("li", { class: "chip chip--learning" }, d); }))
       ]),
       h("section", { class: "zone", "aria-labelledby": "education-title" }, [
         h("h2", { class: "zone__title", id: "education-title" }, c.educationTitle),
@@ -278,7 +276,7 @@
     const c = t().work;
     const view = document.getElementById("view-work");
     view.replaceChildren(
-      header(c.title, c.intro, h("p", { class: "notice" }, c.privacy)),
+      header(c.title, c.intro),
       h("ol", { class: "cases" }, c.cases.map(function (item, i) {
         return h("li", null, h("a", { href: "#work/" + item.id, class: "case-card" }, [
           h("span", { class: "case-card__num" }, pad(i + 1)),
@@ -333,14 +331,8 @@
           ]),
           caseBlock("03 · " + L.role, list(item.role, "list list--check"), c.roleTag, "tag--individual"),
           caseBlock("04 · " + L.strategy, list(item.strategy, "list list--steps")),
-          caseBlock("05 · " + L.solution, h("div", null, [
-            h("ul", { class: "chips" }, item.solution.map(function (s) { return h("li", { class: "chip" }, s); })),
-            h("p", { class: "note" }, c.teamNote)
-          ]), c.teamTag, "tag--team"),
-          caseBlock("06 · " + L.results, h("div", null, [
-            list(item.results),
-            h("p", { class: "note" }, c.resultsNote)
-          ]), c.teamTag, "tag--team"),
+          caseBlock("05 · " + L.solution, h("ul", { class: "chips" }, item.solution.map(function (s) { return h("li", { class: "chip" }, s); })), c.teamTag, "tag--team"),
+          caseBlock("06 · " + L.results, list(item.results), c.teamTag, "tag--team"),
           caseBlock("07 · " + L.learnings, list(item.learnings, "list list--quote")),
           caseBlock("08 · " + L.skills, h("ul", { class: "chips" }, item.skills.map(function (s) {
             return h("li", { class: "chip chip--accent" }, s);
@@ -482,8 +474,7 @@
         ]);
       }).concat(h("section", { class: "zone skill-group skill-group--tools" }, [
         h("h2", { class: "zone__title" }, c.toolsTitle),
-        itemList(c.tools),
-        h("p", { class: "note" }, c.toolsNote)
+        itemList(c.tools)
       ])))
     );
   }
@@ -536,8 +527,7 @@
           })),
           h("a", { href: "#work/" + item.id, class: "link" }, [c.seeCase, h("span", { class: "arrow", "aria-hidden": "true" }, " →")])
         ]);
-      })),
-      h("p", { class: "notice" }, c.disclosure)
+      }))
     ]);
   }
 
