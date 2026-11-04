@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ana Fipke — Product Owner</title>
+<meta name="description" content="Portfólio de Ana Fipke, Product Owner. Conecto negócio, pessoas e tecnologia para transformar necessidades em soluções, estruturar processos e conduzir entregas.">
+<meta name="theme-color" content="#0c0d10">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ana Fipke — Product Owner">
+<meta property="og:description" content="Transformando complexidade em direção, estrutura e resultados.">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<a class="skip" href="#main" data-ui="skip">Pular para o conteúdo</a>
+
+<header class="topbar">
+  <div class="topbar__inner">
+    <a class="brand" href="#home" data-route="home">
+      <span class="brand__mark" aria-hidden="true"></span>
+      <span class="brand__name">Ana Fipke</span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Principal">
+      <ul class="nav__list" id="nav-list"></ul>
+    </nav>
+    <div class="topbar__actions">
+      <button class="lang" id="lang-toggle" type="button"></button>
+      <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+  <section class="view" id="view-home" data-view="home"></section>
+  <section class="view" id="view-about" data-view="about" hidden></section>
+  <section class="view" id="view-work" data-view="work" hidden></section>
+  <section class="view" id="view-method" data-view="method" hidden></section>
+  <section class="view" id="view-skills" data-view="skills" hidden></section>
+  <section class="view" id="view-impact" data-view="impact" hidden></section>
+  <section class="view" id="view-contact" data-view="contact" hidden></section>
+  <noscript><p class="noscript">Este portfólio precisa de JavaScript para exibir o conteúdo. · This portfolio needs JavaScript to display its content.</p></noscript>
+</main>
+
+<footer class="footer">
+  <div class="footer__inner">
+    <span id="footer-text">Ana Fipke · Product Owner</span>
+    <a href="#home" data-route="home" id="footer-home">Voltar ao início</a>
+  </div>
+</footer>
+
+<dialog class="case" id="case-dialog" aria-labelledby="case-title"></dialog>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="assets/js/content.js"></script>
+<script src="assets/js/hero.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
