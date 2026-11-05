@@ -15,11 +15,9 @@
     journey: 3,
     stage: 0,
     level: "all",
-    dimension: "all",
-    heroPlayed: false
+    dimension: "all"
   };
 
-  let destroyHero = null;
   let firstRoute = true;
 
   function h(tag, props, children) {
@@ -134,48 +132,38 @@
 
   function renderHome() {
     const c = t().home;
-    const canvas = h("canvas", { class: "hero__canvas", "aria-hidden": "true" });
-    const view = document.getElementById("view-home");
-    view.replaceChildren(
+    document.getElementById("view-home").replaceChildren(
       h("div", { class: "hero" }, [
-        h("div", { class: "hero__text" }, [
-          h("p", { class: "eyebrow" }, c.kicker),
-          h("h1", { class: "hero__name", tabindex: "-1" }, profile.name),
-          h("p", { class: "hero__role" }, c.role),
-          h("p", { class: "hero__headline" }, [c.headline[0] + " ", h("em", null, c.headline[1])]),
-          h("p", { class: "hero__lead" }, c.lead),
-          h("div", { class: "hero__cta" }, [
-            routeLink(c.shortcuts[1].to, c.shortcuts[1].label, "btn btn--primary"),
-            routeLink(c.shortcuts[3].to, c.shortcuts[3].label, "btn btn--ghost")
-          ])
-        ]),
-        h("figure", { class: "hero__visual" }, [canvas])
+        h("p", { class: "eyebrow" }, c.kicker),
+        h("h1", { class: "hero__name", tabindex: "-1" }, profile.name),
+        h("p", { class: "hero__role" }, c.role),
+        h("p", { class: "hero__headline" }, [c.headline[0] + " ", h("em", null, c.headline[1])]),
+        h("p", { class: "hero__lead" }, c.lead),
+        h("div", { class: "hero__cta" }, [
+          routeLink(c.cta.primary.to, c.cta.primary.label, "btn btn--primary"),
+          routeLink(c.cta.secondary.to, c.cta.secondary.label, "btn btn--ghost")
+        ])
       ]),
       h("div", { class: "home-grid" }, [
-        h("section", { class: "zone pillars", "aria-labelledby": "pillars-title" }, [
-          h("h2", { class: "zone__title", id: "pillars-title" }, c.pillarsTitle),
-          h("ol", { class: "pillars__list" }, c.pillars.map(function (p, i) {
-            return h("li", { class: "pillars__item" }, [
-              h("span", { class: "pillars__num" }, pad(i + 1)),
-              h("h3", null, p.title),
-              h("p", null, p.text)
-            ]);
-          }))
-        ]),
         h("nav", { class: "zone shortcuts", "aria-labelledby": "shortcuts-title" }, [
           h("h2", { class: "zone__title", id: "shortcuts-title" }, c.shortcutsTitle),
           h("ul", { class: "shortcuts__list" }, c.shortcuts.map(function (s) {
             return h("li", null, h("a", { href: "#" + s.to, class: "shortcuts__link" }, [
-              h("span", null, s.label),
+              h("span", { class: "shortcuts__text" }, [
+                h("span", { class: "shortcuts__label" }, s.label),
+                h("span", { class: "shortcuts__desc" }, s.text)
+              ]),
               h("span", { class: "arrow", "aria-hidden": "true" }, "→")
             ]));
           }))
+        ]),
+        h("section", { class: "zone home-next", "aria-labelledby": "home-next-title" }, [
+          h("h2", { class: "zone__title", id: "home-next-title" }, c.nextTitle),
+          h("p", null, c.nextText),
+          routeLink("contact", [c.nextLink, h("span", { class: "arrow", "aria-hidden": "true" }, " →")], "link")
         ])
       ])
     );
-    if (destroyHero) destroyHero();
-    destroyHero = window.Hero ? window.Hero.mount(canvas, { instant: state.heroPlayed }) : null;
-    state.heroPlayed = true;
   }
 
   function renderAbout() {
@@ -236,12 +224,15 @@
           h("h2", { class: "zone__title", id: "traits-title" }, c.profileTitle),
           h("ul", { class: "traits" }, c.traits.map(function (trait) { return h("li", null, trait); }))
         ]),
-        h("section", { class: "zone", "aria-labelledby": "principles-title" }, [
-          h("h2", { class: "zone__title", id: "principles-title" }, c.philosophyTitle),
-          h("ol", { class: "principles" }, c.principles.map(function (p, i) {
-            return h("li", null, [h("span", { class: "principles__num" }, pad(i + 1)), p]);
-          })),
-          h("blockquote", { class: "quote" }, h("p", null, c.quote))
+        h("section", { class: "zone", "aria-labelledby": "pillars-title" }, [
+          h("h2", { class: "zone__title", id: "pillars-title" }, c.pillarsTitle),
+          h("ol", { class: "pillars" }, c.pillars.map(function (p, i) {
+            return h("li", { class: "pillars__item" }, [
+              h("span", { class: "pillars__num" }, pad(i + 1)),
+              h("h3", null, p.title),
+              h("p", null, p.text)
+            ]);
+          }))
         ])
       ]),
       h("section", { class: "zone direction", "aria-labelledby": "direction-title" }, [
@@ -287,7 +278,13 @@
           })),
           h("span", { class: "case-card__more" }, [t().ui.openCase, h("span", { class: "arrow", "aria-hidden": "true" }, " →")])
         ]));
-      }))
+      })),
+      h("section", { class: "zone lessons", "aria-labelledby": "lessons-title" }, [
+        h("h2", { class: "zone__title", id: "lessons-title" }, c.lessonsTitle),
+        h("ul", { class: "lessons__list" }, c.lessons.map(function (l) {
+          return h("li", { class: "lessons__item" }, [h("h3", null, l.title), h("p", null, l.text)]);
+        }))
+      ])
     );
   }
 
@@ -333,8 +330,7 @@
           caseBlock("04 · " + L.strategy, list(item.strategy, "list list--steps")),
           caseBlock("05 · " + L.solution, h("ul", { class: "chips" }, item.solution.map(function (s) { return h("li", { class: "chip" }, s); })), c.teamTag, "tag--team"),
           caseBlock("06 · " + L.results, list(item.results), c.teamTag, "tag--team"),
-          caseBlock("07 · " + L.learnings, list(item.learnings, "list list--quote")),
-          caseBlock("08 · " + L.skills, h("ul", { class: "chips" }, item.skills.map(function (s) {
+          caseBlock("07 · " + L.skills, h("ul", { class: "chips" }, item.skills.map(function (s) {
             return h("li", { class: "chip chip--accent" }, s);
           })))
         ]),
@@ -393,11 +389,16 @@
       panel.replaceChildren(
         h("div", { class: "stage__intro" }, [
           h("span", { class: "stage__big", "aria-hidden": "true" }, pad(i + 1)),
-          h("div", null, [h("h2", null, stage.title), h("p", null, stage.summary)])
+          h("div", null, [
+            h("h2", null, stage.title),
+            h("p", { class: "stage__principle" }, stage.principle),
+            h("p", null, stage.summary)
+          ])
         ]),
         h("div", { class: "stage__cols" }, [
           h("div", null, [h("h3", { class: "stage__sub" }, c.practicesTitle), practiceList(stage.practices)]),
-          stage.refs.length ? h("div", null, [h("h3", { class: "stage__sub" }, c.refsTitle), practiceList(stage.refs)]) : null
+          stage.refs.length ? h("div", null, [h("h3", { class: "stage__sub" }, c.refsTitle), practiceList(stage.refs)]) : null,
+          stage.quote ? h("blockquote", { class: "quote" }, h("p", null, stage.quote)) : null
         ])
       );
       panel.classList.remove("fade-in");
@@ -452,7 +453,7 @@
     }
 
     view.replaceChildren(
-      header(c.title, c.intro),
+      header(c.title),
       h("section", { class: "zone levels" }, h("dl", { class: "levels__list" }, levels.map(function (l) {
         return h("div", { class: "levels__item" }, [
           h("dt", null, [levelMark(l), c.levels[l].label]),
@@ -510,17 +511,22 @@
         h("ul", null, active.items.map(function (i) { return h("li", null, i); }))
       ]) : null,
       h("div", { class: "impact-grid" }, cases.map(function (item, ci) {
+        const rows = [];
+        item.results.forEach(function (r, ri) {
+          const dims = c.dims[item.id][ri] || [];
+          if (!active) rows.push({ text: r, dims: dims });
+          else if (dims.includes(active.id)) rows.push({ text: r, dims: [active.id] });
+        });
+        if (!rows.length) return null;
         return h("section", { class: "zone impact-card" }, [
           h("header", { class: "impact-card__head" }, [
             h("span", { class: "impact-card__num" }, pad(ci + 1)),
             h("h2", null, item.title)
           ]),
-          h("ul", { class: "impact-list" }, item.results.map(function (r, ri) {
-            const dims = c.dims[item.id][ri] || [];
-            const on = state.dimension === "all" || dims.includes(state.dimension);
-            return h("li", { class: on ? "" : "is-dim" }, [
-              h("span", null, r),
-              h("span", { class: "dims" }, dims.map(function (d) {
+          h("ul", { class: "impact-list" }, rows.map(function (row) {
+            return h("li", null, [
+              h("span", null, row.text),
+              h("span", { class: "dims" }, row.dims.map(function (d) {
                 return h("span", { class: "dim dim-" + d, title: dimTitle[d] }, dimTitle[d]);
               }))
             ]);

@@ -42,19 +42,20 @@ window.CONTENT = {
       kicker: "Produto · Processos · Projetos · Tecnologia",
       headline: ["Transformando complexidade em", "direção, estrutura e resultados."],
       lead: "Conecto negócio, pessoas e tecnologia para transformar necessidades em soluções, estruturar processos e conduzir entregas com clareza e propósito.",
-      pillarsTitle: "Onde eu contribuo",
-      pillars: [
-        { title: "Entender", text: "O negócio, o processo real e as necessidades de quem usa a solução." },
-        { title: "Estruturar", text: "Processos, requisitos, regras de negócio e escopo em algo que a equipe consegue construir." },
-        { title: "Conduzir", text: "Entregas organizadas por valor, acompanhadas de perto até estarem em uso." }
-      ],
-      shortcutsTitle: "Por onde começar",
+      cta: {
+        primary: { label: "Explorar projetos", to: "work" },
+        secondary: { label: "Entrar em contato", to: "contact" }
+      },
+      shortcutsTitle: "O que você encontra aqui",
       shortcuts: [
-        { label: "Conhecer minha trajetória", to: "about" },
-        { label: "Explorar projetos", to: "work" },
-        { label: "Entender como trabalho", to: "method" },
-        { label: "Entrar em contato", to: "contact" }
+        { label: "Trajetória", text: "Do suporte ao produto, e onde essa experiência contribui.", to: "about" },
+        { label: "Projetos", text: "Quatro cases reais: o desafio, a minha atuação, a solução e o impacto.", to: "work" },
+        { label: "Forma de trabalhar", text: "Como conduzo uma demanda, do entendimento do problema à solução em uso.", to: "method" },
+        { label: "Resultados", text: "O que mudou na operação, no controle e no resultado financeiro.", to: "impact" }
       ],
+      nextTitle: "Próximos passos",
+      nextText: "Atuo como Product Owner e venho aprofundando gestão de projetos, governança e indicadores, aproximando minha atuação de Project Management e PMO.",
+      nextLink: "Vamos conversar"
     },
     about: {
       title: "Sobre mim",
@@ -98,15 +99,12 @@ window.CONTENT = {
         "Orientação a resultados",
         "Adaptabilidade e aprendizado contínuo"
       ],
-      philosophyTitle: "Como eu penso o trabalho",
-      principles: [
-        "Entender antes de propor.",
-        "Questionar para construir soluções melhores.",
-        "Transformar complexidade em clareza.",
-        "Priorizar valor, não apenas entregas.",
-        "Aprender, adaptar e melhorar continuamente."
+      pillarsTitle: "Onde eu contribuo",
+      pillars: [
+        { title: "Entender", text: "O negócio, o processo real e as necessidades de quem usa a solução." },
+        { title: "Estruturar", text: "Processos, requisitos, regras de negócio e escopo em algo que a equipe consegue construir." },
+        { title: "Conduzir", text: "Entregas organizadas por valor, acompanhadas de perto até estarem em uso." }
       ],
-      quote: "Organização não deve existir apenas para controlar. Deve criar condições para realizar.",
       directionTitle: "Para onde estou indo",
       directionText: "Quero aprofundar conhecimentos que complementam minha atuação como PO e me aproximam de Project Management e PMO:",
       direction: ["Gestão de projetos", "Governança", "Gestão de portfólio", "Indicadores e acompanhamento", "Melhoria contínua"],
@@ -120,7 +118,7 @@ window.CONTENT = {
     },
     work: {
       title: "Experiência e projetos",
-      intro: "Quatro cases reais, contados pelo desafio, pelas decisões e pela forma como participei. Separo o que foi minha atuação do que foi entregue pela equipe.",
+      intro: "Quatro cases reais, apresentados pelo desafio, pela minha atuação, pela solução construída e pelo impacto gerado.",
       labels: {
         context: "Contexto",
         challenge: "Desafio",
@@ -128,7 +126,6 @@ window.CONTENT = {
         strategy: "Estratégia e execução",
         solution: "Solução e entregáveis",
         results: "Resultados e impacto",
-        learnings: "Aprendizados",
         skills: "Competências demonstradas"
       },
       roleTag: "Individual",
@@ -138,14 +135,16 @@ window.CONTENT = {
           id: "legacy",
           title: "Modernização de sistema legado",
           summary: "Da aplicação desktop consolidada para uma solução web e em nuvem, sem documentação funcional de partida.",
-          context: "Modernização de uma aplicação desktop consolidada, com migração para uma solução web e em nuvem.",
-          challenge: "Ausência de documentação funcional, regras complexas e necessidade de engajar os usuários na validação da nova solução.",
+          context: "Modernização de uma aplicação desktop consolidada, com migração para uma solução web e em nuvem. O conhecimento sobre o funcionamento do sistema estava no código e no uso diário, não em documentação.",
+          challenge: "Reconstruir o sistema sem documentação funcional, com regras de negócio complexas e exigências legais, preservando o comportamento esperado pela operação e conquistando a adesão dos usuários à nova solução.",
           role: [
-            "Investigação do comportamento do sistema existente.",
+            "Investigação do comportamento do sistema existente para identificar regras, exceções e fluxos.",
             "Levantamento e documentação de regras de negócio.",
             "Análise de requisitos e da legislação aplicável.",
-            "Apoio à estruturação modular das entregas.",
-            "Validação funcional e documentação de utilização."
+            "Esclarecimento de regras e dúvidas funcionais junto ao desenvolvimento.",
+            "Apoio à estruturação modular do escopo e das entregas.",
+            "Validação funcional dos módulos com os usuários.",
+            "Elaboração de manuais funcionais e orientação de uso."
           ],
           strategy: [
             "Tratar o sistema existente como principal fonte de verdade, investigando seu comportamento para tornar explícito o conhecimento que estava apenas no código e no uso.",
@@ -159,24 +158,20 @@ window.CONTENT = {
             "Aplicação mais rápida e intuitiva.",
             "Maior autonomia dos usuários por meio de manuais funcionais."
           ],
-          learnings: [
-            "Em sistemas legados, documentar é parte da entrega, não uma etapa opcional.",
-            "Engajamento de usuários se constrói cedo, com validações frequentes e próximas do uso real."
-          ],
           skills: ["Análise funcional", "Gestão de requisitos", "Modernização", "Validação", "Gestão de mudanças", "Documentação"]
         },
         {
           id: "scheduling",
           title: "Internalização de processo de agendamento",
           summary: "Uma solução interna para substituir a dependência de fornecedor externo em um processo operacional sensível.",
-          context: "Necessidade de reduzir a dependência de um fornecedor externo e estruturar uma solução interna.",
-          challenge: "Reorganizar um processo operacional que envolvia contratos, calendários e disponibilidade personalizada.",
+          context: "O agendamento dependia de um fornecedor externo, com custos associados e pouca autonomia para adaptar o processo às necessidades da operação.",
+          challenge: "Internalizar um processo operacional sensível, cujas regras envolviam contratos, calendários e disponibilidade personalizada, e torná-las configuráveis pela própria operação.",
           role: [
-            "Levantamento de necessidades com a área de negócio.",
-            "Estruturação do escopo.",
-            "Organização dos requisitos.",
-            "Acompanhamento da construção.",
-            "Apresentação e acompanhamento da primeira versão em operação."
+            "Levantamento das necessidades com a área de negócio e entendimento do processo operacional.",
+            "Identificação das regras de contratos, calendários e disponibilidade.",
+            "Estruturação do escopo e organização dos requisitos.",
+            "Acompanhamento da construção junto ao desenvolvimento.",
+            "Apresentação da primeira versão e acompanhamento do uso em operação."
           ],
           strategy: [
             "Partir do processo real da operação antes de desenhar a solução.",
@@ -190,30 +185,26 @@ window.CONTENT = {
             "Maior autonomia para personalização e evolução.",
             "Melhor planejamento operacional."
           ],
-          learnings: [
-            "Internalizar um processo também significa assumir suas regras: elas precisam estar claras antes da construção.",
-            "O acompanhamento da primeira versão em uso é parte do escopo, não um pós-projeto."
-          ],
           skills: ["Levantamento de requisitos", "Gestão de escopo", "Relacionamento com stakeholders", "Organização de entregas", "Acompanhamento operacional"]
         },
         {
           id: "services",
           title: "Gestão de serviços adicionais",
           summary: "Do fluxo por e-mail para um sistema com rastreabilidade de solicitações, aprovações, volumes e custos.",
-          context: "Solicitações e aprovações eram feitas por e-mail, com dificuldade de rastrear históricos e custos.",
-          challenge: "Centralizar o fluxo e permitir o acompanhamento dos serviços solicitados e realizados.",
+          context: "Solicitações e aprovações de serviços adicionais eram feitas por e-mail, de forma descentralizada, sem histórico consolidado nem visão clara de volumes e custos.",
+          challenge: "Centralizar o fluxo de solicitação e aprovação e tornar rastreáveis os serviços solicitados e realizados, criando base para acompanhar volumes e custos.",
           role: [
-            "Revisão e alinhamento do escopo.",
-            "Organização de requisitos.",
-            "Estimativa e acompanhamento de esforço.",
+            "Revisão e alinhamento do escopo com as partes envolvidas.",
+            "Organização dos requisitos do fluxo de solicitações e aprovações.",
+            "Estimativa de esforço e acompanhamento do planejado em relação ao realizado.",
             "Controle diário das atividades.",
-            "Alinhamento com desenvolvimento.",
-            "Acompanhamento da entrega."
+            "Alinhamento contínuo com o desenvolvimento.",
+            "Acompanhamento da entrega até a aprovação pelo cliente."
           ],
           strategy: [
-            "Revisar e alinhar o escopo antes do início da construção.",
-            "Estimar o esforço e acompanhar diariamente o planejado em relação ao realizado.",
-            "Manter alinhamento contínuo com desenvolvimento para antecipar impedimentos."
+            "Alinhar o escopo antes da construção, para que o fluxo cobrisse solicitação, aprovação e acompanhamento de custos.",
+            "Manter o planejado e o realizado visíveis no dia a dia, com estimativas e um controle diário simples.",
+            "Antecipar impedimentos com alinhamento próximo ao desenvolvimento."
           ],
           solution: ["Sistema de solicitações", "Rastreabilidade de histórico", "Notificações automáticas", "Acompanhamento de volumes e custos"],
           results: [
@@ -221,12 +212,7 @@ window.CONTENT = {
             "Acompanhamento mensal de volumes.",
             "Maior visibilidade dos custos.",
             "Possibilidade de repasse dos valores aos clientes.",
-            "Entrega aprovada pelo cliente e incorporada à rotina de uso.",
-            "Conclusão dentro do prazo planejado."
-          ],
-          learnings: [
-            "Acompanhamento diário, quando simples e objetivo, mantém o prazo visível para todos.",
-            "Rastreabilidade gera valor que vai além do processo: abre caminho para decisões financeiras."
+            "Entrega aprovada pelo cliente e incorporada à rotina de uso."
           ],
           skills: ["Acompanhamento de cronograma", "Estimativa de esforço", "Gestão de escopo", "Rastreabilidade", "Comunicação"]
         },
@@ -234,15 +220,14 @@ window.CONTENT = {
           id: "digitization",
           title: "Digitalização de processo operacional",
           summary: "Um processo crítico controlado por planilhas há mais de uma década, transformado em solução integrada.",
-          context: "Processo crítico controlado por planilhas individuais, utilizadas há mais de uma década.",
-          challenge: "Transformar uma demanda inicialmente limitada a um cadastro em uma solução estruturada, envolvendo diferentes equipes e etapas operacionais.",
+          context: "Um processo crítico era controlado por planilhas individuais havia mais de uma década, com informações espalhadas entre pessoas e etapas e regras que não estavam documentadas.",
+          challenge: "A demanda chegou como um pedido de cadastro. Ao entender o processo completo, ficou claro que a necessidade envolvia diferentes equipes, etapas operacionais, aprovações e integrações, e que a solução precisava cobrir o fluxo de ponta a ponta.",
           role: [
-            "Condução de reuniões de levantamento.",
-            "Revisão e ampliação do escopo.",
+            "Condução de reuniões de levantamento com as equipes envolvidas.",
+            "Mapeamento do processo de ponta a ponta, com revisão e ampliação do escopo.",
             "Documentação de regras de negócio.",
-            "Escrita de histórias de usuário e critérios de aceite.",
-            "Priorização de backlog.",
-            "Negociação de mudanças com stakeholders.",
+            "Priorização de backlog e organização das entregas.",
+            "Negociação de mudanças de escopo com stakeholders.",
             "Acompanhamento do desenvolvimento.",
             "Organização de homologações.",
             "Apresentações e documentação funcional.",
@@ -250,7 +235,7 @@ window.CONTENT = {
           ],
           strategy: [
             "Olhar além do cadastro solicitado e mapear o fluxo de ponta a ponta com as equipes envolvidas.",
-            "Transformar o conhecimento espalhado em planilhas em regras de negócio documentadas, histórias e critérios de aceite.",
+            "Transformar o conhecimento espalhado em planilhas em regras de negócio documentadas, base para o desenvolvimento e para a validação.",
             "Priorizar o backlog e negociar mudanças com os stakeholders, mantendo as homologações organizadas por etapa."
           ],
           solution: ["Cadastro e permissões", "Aprovações multinível", "Notificações automáticas", "Integrações"],
@@ -261,17 +246,32 @@ window.CONTENT = {
             "Integração de etapas e informações.",
             "Geração de resultados financeiros positivos."
           ],
-          learnings: [
-            "A demanda que chega raramente é o problema inteiro: revisar o escopo cedo evita uma solução que só digitaliza a planilha.",
-            "Processos antigos carregam regras não escritas; elas aparecem quando todas as equipes estão na mesma conversa."
-          ],
           skills: ["Product Ownership", "Gestão de requisitos", "Escopo", "Stakeholders", "Backlog", "Homologação", "Documentação", "Condução de entregas complexas"]
+        }
+      ],
+      lessonsTitle: "O que a experiência me ensinou",
+      lessons: [
+        {
+          title: "Entender o problema antes de propor uma solução",
+          text: "A solicitação que chega de uma área nem sempre representa a necessidade real. Antes de definir uma solução, é preciso investigar a origem do problema, entender a dor de quem vive o processo e analisar o fluxo completo. Como Product Owner, preciso saber como o sistema se encaixa na operação e como cada etapa se relaciona com as demais."
+        },
+        {
+          title: "Equilibrar necessidade, valor e viabilidade",
+          text: "Nem tudo o que é solicitado pode, ou precisa, ser desenvolvido de imediato. Prioridades, capacidade técnica, dependências e restrições exigem ajustes no planejamento. A solução precisa atender à necessidade do negócio sem desconsiderar a viabilidade e a qualidade da entrega."
+        },
+        {
+          title: "Considerar diferentes perspectivas",
+          text: "Cada projeto reúne áreas, usuários e equipes com necessidades e expectativas diferentes. Ouvir essas perspectivas, alinhar entendimentos e deixar as decisões claras para todos os envolvidos é o que sustenta o que está sendo construído."
+        },
+        {
+          title: "A entrega não termina no desenvolvimento",
+          text: "Uma entrega só se completa quando funciona no processo real. Isso envolve validar com quem usa, considerar cenários de uso e impactos em outras funcionalidades, organizar documentação, orientações e treinamentos e acompanhar a implantação para identificar os ajustes necessários."
         }
       ]
     },
     method: {
       title: "Como eu trabalho",
-      intro: "Meu método acompanha a vida de uma demanda: do entendimento do problema até a solução em uso e o aprendizado que fica. Indico o que já pratico e o que conheço, mas ainda não apliquei formalmente.",
+      intro: "Meu método acompanha a vida de uma demanda: do entendimento do problema até a solução em uso e o aprendizado que fica.",
       legend: { done: "Prática executada", known: "Conhecimento / em estudo" },
       practicesTitle: "Práticas",
       refsTitle: "Referências",
@@ -279,7 +279,8 @@ window.CONTENT = {
         {
           id: "discovery",
           title: "Discovery e estruturação",
-          summary: "Entender a necessidade e o processo real antes de propor qualquer solução.",
+          principle: "Entender antes de propor.",
+          summary: "Investigar a origem da necessidade, o processo real e as regras envolvidas antes de definir a solução.",
           practices: [
             ["Levantamento de requisitos", "done"],
             ["Entendimento de necessidades", "done"],
@@ -289,28 +290,28 @@ window.CONTENT = {
             ["Estruturação de escopo", "done"],
             ["Identificação de oportunidades de melhoria", "done"]
           ],
-          refs: [["BPM", "known"], ["MoSCoW", "known"], ["SCAMPER", "known"], ["Lean", "known"]]
+          refs: [["Lean BPM", "known"], ["SCAMPER", "known"]]
         },
         {
           id: "planning",
           title: "Planejamento e organização",
+          principle: "Priorizar valor, não apenas entregas.",
           summary: "Transformar o escopo em um caminho de entrega claro, priorizado e incremental.",
           practices: [
-            ["Organização de backlog", "done"],
-            ["Escrita de histórias de usuário", "done"],
-            ["Definição de critérios de aceite", "done"],
-            ["Priorização de demandas", "done"],
-            ["Estruturação de MVP", "done"],
+            ["Priorização de backlog", "done"],
+            ["Organização de prioridades por ciclos de entrega", "done"],
+            ["Planejamento de MVP", "done"],
             ["Entregas incrementais", "done"],
+            ["Definição de critérios de aceite", "done"],
             ["Estimativa de esforço", "done"],
-            ["Organização de prazos e prioridades", "done"],
             ["Acompanhamento de capacidade", "done"]
           ],
-          refs: []
+          refs: [["MoSCoW", "known"]]
         },
         {
           id: "tracking",
           title: "Acompanhamento e controle",
+          principle: "Transformar complexidade em clareza.",
           summary: "Manter o andamento visível e agir cedo sobre impedimentos e mudanças.",
           practices: [
             ["Acompanhamento de desenvolvimento", "done"],
@@ -333,6 +334,7 @@ window.CONTENT = {
         {
           id: "quality",
           title: "Qualidade, validação e implantação",
+          principle: "Questionar para construir soluções melhores.",
           summary: "Garantir que a solução funciona, é compreendida e é adotada por quem usa.",
           practices: [
             ["Prototipação", "done"],
@@ -350,7 +352,8 @@ window.CONTENT = {
         {
           id: "governance",
           title: "Governança e melhoria contínua",
-          summary: "Registrar decisões e responsabilidades para que o processo continue melhorando.",
+          principle: "Aprender, adaptar e melhorar continuamente.",
+          summary: "Registrar decisões, responsabilidades e mudanças para que o processo tenha continuidade.",
           practices: [
             ["Documentação de decisões", "done"],
             ["Definição de responsáveis e etapas", "done"],
@@ -360,13 +363,13 @@ window.CONTENT = {
             ["Registro de premissas e restrições", "known"],
             ["Identificação de riscos e dependências", "known"]
           ],
-          refs: [["PMBOK", "known"], ["BPM/BPMS", "known"], ["Lean", "known"], ["SCQA", "known"], ["Pirâmide de Minto", "known"]]
+          refs: [],
+          quote: "Organização não deve existir apenas para controlar. Deve criar condições para realizar."
         }
       ]
     },
     skills: {
       title: "Ferramentas e conhecimentos",
-      intro: "Repertório organizado por área. Em vez de notas ou porcentagens, cada item mostra como ele se relaciona com a minha prática.",
       levels: {
         practice: { label: "Experiência prática", text: "Utilizado diretamente em atividades profissionais." },
         knowledge: { label: "Conhecimento", text: "Compreendo conceitos e aplicações." },
@@ -421,8 +424,7 @@ window.CONTENT = {
             ["Homologação", "practice"],
             ["Análise de comportamento de sistemas", "practice"],
             ["Integrações", "practice"],
-            ["Documentação funcional", "practice"],
-            ["Sistemas web e modernização de legados", "practice"]
+            ["Documentação funcional", "practice"]
           ]
         },
         {
@@ -446,13 +448,12 @@ window.CONTENT = {
         ["Trello", "practice"],
         ["Microsoft Excel", "practice"],
         ["HTML para prototipação", "practice"],
-        ["Tecnologias e sistemas web", "practice"],
-        ["Delphi (ambiente legado)", "knowledge"]
+        ["Tecnologias e sistemas web", "practice"]
       ]
     },
     impact: {
       title: "Resultados e impacto",
-      intro: "O que mudou depois de cada entrega. Os resultados são do projeto e foram construídos em equipe; minha contribuição está descrita em cada case.",
+      intro: "Projetos que transformaram rotinas, ampliaram controles e geraram melhorias operacionais e financeiras. Os resultados foram construídos em equipe; minha atuação em cada um está descrita nos cases.",
       questions: ["O que mudou?", "Qual problema foi resolvido?", "Qual benefício foi gerado?", "Qual foi minha contribuição?"],
       filterAll: "Todas as dimensões",
       filterLabel: "Dimensões de impacto",
@@ -466,7 +467,7 @@ window.CONTENT = {
       dims: {
         legacy: [["tech"], ["ops", "tech"], ["adoption", "tech"], ["adoption"]],
         scheduling: [["tech"], ["fin"], ["tech"], ["ops"]],
-        services: [["gov"], ["gov"], ["fin", "gov"], ["fin"], ["adoption"], ["ops"]],
+        services: [["gov"], ["gov"], ["fin", "gov"], ["fin"], ["adoption"]],
         digitization: [["ops", "gov"], ["ops"], ["gov"], ["tech", "ops"], ["fin"]]
       },
       seeCase: "Ver case"
@@ -519,19 +520,20 @@ window.CONTENT = {
       kicker: "Product · Process · Projects · Technology",
       headline: ["Turning complexity into", "direction, structure and results."],
       lead: "I connect business, people and technology to turn needs into solutions, structure processes and lead deliveries with clarity and purpose.",
-      pillarsTitle: "Where I add value",
-      pillars: [
-        { title: "Understand", text: "The business, the real process and the needs of the people who use the solution." },
-        { title: "Structure", text: "Processes, requirements, business rules and scope into something the team can build." },
-        { title: "Deliver", text: "Value-driven deliveries, followed closely until they are in real use." }
-      ],
-      shortcutsTitle: "Where to start",
+      cta: {
+        primary: { label: "Browse projects", to: "work" },
+        secondary: { label: "Get in touch", to: "contact" }
+      },
+      shortcutsTitle: "What you will find here",
       shortcuts: [
-        { label: "Explore my career path", to: "about" },
-        { label: "Browse projects", to: "work" },
-        { label: "See how I work", to: "method" },
-        { label: "Get in touch", to: "contact" }
+        { label: "Career path", text: "From support to product, and where that experience adds value.", to: "about" },
+        { label: "Projects", text: "Four real cases: the challenge, my role, the solution and the impact.", to: "work" },
+        { label: "Way of working", text: "How I take a demand from understanding the problem to a solution in use.", to: "method" },
+        { label: "Results", text: "What changed in operations, control and financial results.", to: "impact" }
       ],
+      nextTitle: "Next steps",
+      nextText: "I work as a Product Owner and I am deepening my knowledge of project management, governance and metrics, moving my work closer to Project Management and PMO.",
+      nextLink: "Let's talk"
     },
     about: {
       title: "About",
@@ -575,15 +577,12 @@ window.CONTENT = {
         "Results orientation",
         "Adaptability and continuous learning"
       ],
-      philosophyTitle: "How I think about work",
-      principles: [
-        "Understand before proposing.",
-        "Ask questions to build better solutions.",
-        "Turn complexity into clarity.",
-        "Prioritize value, not just output.",
-        "Learn, adapt and keep improving."
+      pillarsTitle: "Where I add value",
+      pillars: [
+        { title: "Understand", text: "The business, the real process and the needs of the people who use the solution." },
+        { title: "Structure", text: "Processes, requirements, business rules and scope into something the team can build." },
+        { title: "Deliver", text: "Value-driven deliveries, followed closely until they are in real use." }
       ],
-      quote: "Organization should not exist only to control. It should create the conditions to get things done.",
       directionTitle: "Where I am heading",
       directionText: "I want to deepen the knowledge that complements my work as a PO and brings me closer to Project Management and PMO:",
       direction: ["Project management", "Governance", "Portfolio management", "Metrics and monitoring", "Continuous improvement"],
@@ -597,7 +596,7 @@ window.CONTENT = {
     },
     work: {
       title: "Experience & projects",
-      intro: "Four real cases, told through the challenge, the decisions and how I took part. I separate my own contribution from what the team delivered.",
+      intro: "Four real cases, presented through the challenge, my role, the solution built and the impact it created.",
       labels: {
         context: "Context",
         challenge: "Challenge",
@@ -605,7 +604,6 @@ window.CONTENT = {
         strategy: "Approach and execution",
         solution: "Solution and deliverables",
         results: "Results and impact",
-        learnings: "Lessons learned",
         skills: "Skills demonstrated"
       },
       roleTag: "Individual",
@@ -615,14 +613,16 @@ window.CONTENT = {
           id: "legacy",
           title: "Legacy system modernization",
           summary: "From a long-established desktop application to a cloud-based web solution, starting with no functional documentation.",
-          context: "Modernization of a long-established desktop application, migrating it to a cloud-based web solution.",
-          challenge: "No functional documentation, complex business rules and the need to engage users in validating the new solution.",
+          context: "Modernization of a long-established desktop application, migrating it to a cloud-based web solution. Knowledge of how the system worked lived in its code and in daily use, not in documentation.",
+          challenge: "Rebuild the system without functional documentation, with complex business rules and legal requirements, preserving the behavior the operation relied on and earning users' buy-in for the new solution.",
           role: [
-            "Investigated how the existing system behaved.",
+            "Investigated how the existing system behaved to identify rules, exceptions and flows.",
             "Gathered and documented business rules.",
             "Analyzed requirements and applicable regulations.",
-            "Supported a modular structure for deliveries.",
-            "Ran functional validation and wrote user documentation."
+            "Clarified rules and functional questions with the development team.",
+            "Supported a modular structure for scope and deliveries.",
+            "Ran functional validation of each module with users.",
+            "Wrote functional manuals and guided users."
           ],
           strategy: [
             "Use the existing system as the main source of truth, investigating its behavior to make explicit the knowledge that lived only in code and daily use.",
@@ -636,24 +636,20 @@ window.CONTENT = {
             "A faster, more intuitive application.",
             "More user autonomy through functional manuals."
           ],
-          learnings: [
-            "In legacy systems, documentation is part of the delivery, not an optional step.",
-            "User engagement is built early, through frequent validation close to real use."
-          ],
           skills: ["Functional analysis", "Requirements management", "Modernization", "Validation", "Change management", "Documentation"]
         },
         {
           id: "scheduling",
           title: "Bringing a scheduling process in-house",
           summary: "An internal solution to replace dependence on an external vendor in a sensitive operational process.",
-          context: "The need to reduce dependence on an external vendor and build an internal solution.",
-          challenge: "Reorganize an operational process involving contracts, calendars and custom availability.",
+          context: "Scheduling depended on an external vendor, with related costs and little autonomy to adapt the process to the operation's needs.",
+          challenge: "Bring a sensitive operational process in-house, with rules involving contracts, calendars and custom availability, and make those rules configurable by the operation itself.",
           role: [
-            "Gathered needs with the business team.",
-            "Structured the scope.",
-            "Organized requirements.",
-            "Followed the build.",
-            "Presented and supported the first version in operation."
+            "Gathered needs with the business team and mapped the operational process.",
+            "Identified the rules for contracts, calendars and availability.",
+            "Structured the scope and organized requirements.",
+            "Followed the build together with the development team.",
+            "Presented the first version and followed its use in operation."
           ],
           strategy: [
             "Start from how the operation really works before designing the solution.",
@@ -667,30 +663,26 @@ window.CONTENT = {
             "More autonomy to customize and evolve.",
             "Better operational planning."
           ],
-          learnings: [
-            "Bringing a process in-house means owning its rules: they must be clear before the build starts.",
-            "Following the first version in use is part of the scope, not an afterthought."
-          ],
           skills: ["Requirements gathering", "Scope management", "Stakeholder management", "Delivery planning", "Operational follow-up"]
         },
         {
           id: "services",
           title: "Additional services management",
           summary: "From an email-based flow to a system that tracks requests, approvals, volumes and costs.",
-          context: "Requests and approvals were handled by email, making history and costs hard to track.",
-          challenge: "Centralize the flow and make requested and completed services trackable.",
+          context: "Requests and approvals for additional services were handled by email in a decentralized way, with no consolidated history and no clear view of volumes and costs.",
+          challenge: "Centralize the request and approval flow and make requested and completed services traceable, creating a basis for tracking volumes and costs.",
           role: [
-            "Reviewed and aligned the scope.",
-            "Organized requirements.",
-            "Estimated and tracked effort.",
+            "Reviewed and aligned the scope with the people involved.",
+            "Organized requirements for the request and approval flow.",
+            "Estimated effort and tracked planned versus actual.",
             "Tracked activities daily.",
-            "Kept alignment with the development team.",
-            "Followed the delivery through."
+            "Kept continuous alignment with the development team.",
+            "Followed the delivery through to client approval."
           ],
           strategy: [
-            "Review and align scope before the build started.",
-            "Estimate effort and track planned versus actual every day.",
-            "Stay continuously aligned with development to anticipate blockers."
+            "Align scope before the build so the flow covered requests, approvals and cost tracking.",
+            "Keep planned and actual visible day to day, with estimates and simple daily tracking.",
+            "Anticipate blockers through close alignment with development."
           ],
           solution: ["Request management system", "Traceable history", "Automated notifications", "Volume and cost tracking"],
           results: [
@@ -698,12 +690,7 @@ window.CONTENT = {
             "Monthly volume tracking.",
             "Better cost visibility.",
             "The option to pass costs on to clients.",
-            "Delivery approved by the client and adopted in daily operations.",
-            "Completed on the planned schedule."
-          ],
-          learnings: [
-            "Daily tracking, kept simple and objective, keeps the deadline visible to everyone.",
-            "Traceability creates value beyond the process itself: it enables financial decisions."
+            "Delivery approved by the client and adopted in daily operations."
           ],
           skills: ["Schedule tracking", "Effort estimation", "Scope management", "Traceability", "Communication"]
         },
@@ -711,15 +698,14 @@ window.CONTENT = {
           id: "digitization",
           title: "Digitizing an operational process",
           summary: "A critical process run on spreadsheets for over a decade, turned into an integrated solution.",
-          context: "A critical process managed through individual spreadsheets for more than ten years.",
-          challenge: "Turn a request initially limited to data entry into a structured solution involving several teams and operational stages.",
+          context: "A critical process had been managed through individual spreadsheets for more than ten years, with information scattered across people and stages and rules that were never documented.",
+          challenge: "The request arrived as a data-entry screen. Once the full process was understood, it became clear that the need involved several teams, operational stages, approvals and integrations, and that the solution had to cover the flow end to end.",
           role: [
-            "Led discovery meetings.",
-            "Reviewed and expanded the scope.",
+            "Led discovery meetings with the teams involved.",
+            "Mapped the end-to-end process, reviewing and expanding the scope.",
             "Documented business rules.",
-            "Wrote user stories and acceptance criteria.",
-            "Prioritized the backlog.",
-            "Negotiated changes with stakeholders.",
+            "Prioritized the backlog and organized deliveries.",
+            "Negotiated scope changes with stakeholders.",
             "Followed development.",
             "Organized user acceptance testing.",
             "Delivered presentations and functional documentation.",
@@ -727,7 +713,7 @@ window.CONTENT = {
           ],
           strategy: [
             "Look beyond the requested data-entry screen and map the end-to-end flow with every team involved.",
-            "Turn knowledge scattered across spreadsheets into documented business rules, user stories and acceptance criteria.",
+            "Turn knowledge scattered across spreadsheets into documented business rules, the basis for both development and validation.",
             "Prioritize the backlog and negotiate changes with stakeholders, keeping acceptance testing organized by stage."
           ],
           solution: ["Data entry and permissions", "Multi-level approvals", "Automated notifications", "Integrations"],
@@ -738,17 +724,32 @@ window.CONTENT = {
             "Integrated stages and information.",
             "Positive financial results."
           ],
-          learnings: [
-            "The request that arrives is rarely the whole problem: reviewing scope early avoids a solution that only digitizes the spreadsheet.",
-            "Old processes carry unwritten rules; they surface when every team is in the same conversation."
-          ],
           skills: ["Product Ownership", "Requirements management", "Scope", "Stakeholders", "Backlog", "User acceptance testing", "Documentation", "Leading complex deliveries"]
+        }
+      ],
+      lessonsTitle: "What experience has taught me",
+      lessons: [
+        {
+          title: "Understand the problem before proposing a solution",
+          text: "What a team asks for does not always reflect what it actually needs. Before defining a solution, I need to investigate where the problem comes from, understand the pain of the people living the process and look at the whole flow. As a Product Owner, I need to know how the system fits into the operation and how each stage relates to the others."
+        },
+        {
+          title: "Balance need, value and feasibility",
+          text: "Not everything that is requested can, or should, be built right away. Priorities, technical capacity, dependencies and constraints call for adjustments to the plan. The solution has to meet the business need without losing sight of feasibility and delivery quality."
+        },
+        {
+          title: "Consider different perspectives",
+          text: "Every project brings together teams, users and areas with different needs and expectations. Listening to those perspectives, aligning understanding and making decisions clear to everyone involved is what holds the work together."
+        },
+        {
+          title: "Delivery does not end with development",
+          text: "A delivery is only complete when it works in the real process. That means validating with the people who use it, considering usage scenarios and impacts on other features, organizing documentation, guidance and training, and following the rollout to identify the adjustments it needs."
         }
       ]
     },
     method: {
       title: "How I work",
-      intro: "My method follows the life of a demand: from understanding the problem to a solution in use and the lessons it leaves behind. I mark what I already practice and what I know but have not yet applied formally.",
+      intro: "My method follows the life of a demand: from understanding the problem to a solution in use and the lessons it leaves behind.",
       legend: { done: "Hands-on practice", known: "Knowledge / studying" },
       practicesTitle: "Practices",
       refsTitle: "References",
@@ -756,7 +757,8 @@ window.CONTENT = {
         {
           id: "discovery",
           title: "Discovery and structuring",
-          summary: "Understand the need and the real process before proposing any solution.",
+          principle: "Understand before proposing.",
+          summary: "Investigate where the need comes from, the real process and the rules involved before defining the solution.",
           practices: [
             ["Requirements gathering", "done"],
             ["Understanding needs", "done"],
@@ -766,28 +768,28 @@ window.CONTENT = {
             ["Scope definition", "done"],
             ["Spotting improvement opportunities", "done"]
           ],
-          refs: [["BPM", "known"], ["MoSCoW", "known"], ["SCAMPER", "known"], ["Lean", "known"]]
+          refs: [["Lean BPM", "known"], ["SCAMPER", "known"]]
         },
         {
           id: "planning",
           title: "Planning and organization",
+          principle: "Prioritize value, not just output.",
           summary: "Turn scope into a clear, prioritized and incremental delivery path.",
           practices: [
-            ["Backlog management", "done"],
-            ["Writing user stories", "done"],
-            ["Defining acceptance criteria", "done"],
-            ["Prioritization", "done"],
-            ["MVP definition", "done"],
+            ["Backlog prioritization", "done"],
+            ["Organizing priorities by delivery cycle", "done"],
+            ["MVP planning", "done"],
             ["Incremental delivery", "done"],
+            ["Defining acceptance criteria", "done"],
             ["Effort estimation", "done"],
-            ["Deadline and priority planning", "done"],
             ["Capacity tracking", "done"]
           ],
-          refs: []
+          refs: [["MoSCoW", "known"]]
         },
         {
           id: "tracking",
           title: "Monitoring and control",
+          principle: "Turn complexity into clarity.",
           summary: "Keep progress visible and act early on blockers and changes.",
           practices: [
             ["Development follow-up", "done"],
@@ -810,6 +812,7 @@ window.CONTENT = {
         {
           id: "quality",
           title: "Quality, validation and rollout",
+          principle: "Ask questions to build better solutions.",
           summary: "Make sure the solution works, is understood and is adopted by the people who use it.",
           practices: [
             ["Prototyping", "done"],
@@ -827,7 +830,8 @@ window.CONTENT = {
         {
           id: "governance",
           title: "Governance and continuous improvement",
-          summary: "Record decisions and responsibilities so the process keeps improving.",
+          principle: "Learn, adapt and keep improving.",
+          summary: "Record decisions, responsibilities and changes so the process has continuity.",
           practices: [
             ["Documenting decisions", "done"],
             ["Defining owners and stages", "done"],
@@ -837,13 +841,13 @@ window.CONTENT = {
             ["Logging assumptions and constraints", "known"],
             ["Identifying risks and dependencies", "known"]
           ],
-          refs: [["PMBOK", "known"], ["BPM/BPMS", "known"], ["Lean", "known"], ["SCQA", "known"], ["Minto Pyramid", "known"]]
+          refs: [],
+          quote: "Organization should not exist only to control. It should create the conditions to get things done."
         }
       ]
     },
     skills: {
       title: "Tools & knowledge",
-      intro: "My toolkit, organized by area. Instead of scores or percentages, each item shows how it relates to my actual practice.",
       levels: {
         practice: { label: "Hands-on experience", text: "Used directly in professional work." },
         knowledge: { label: "Knowledge", text: "I understand the concepts and how they apply." },
@@ -898,8 +902,7 @@ window.CONTENT = {
             ["User acceptance testing", "practice"],
             ["System behavior analysis", "practice"],
             ["Integrations", "practice"],
-            ["Functional documentation", "practice"],
-            ["Web systems and legacy modernization", "practice"]
+            ["Functional documentation", "practice"]
           ]
         },
         {
@@ -923,13 +926,12 @@ window.CONTENT = {
         ["Trello", "practice"],
         ["Microsoft Excel", "practice"],
         ["HTML for prototyping", "practice"],
-        ["Web technologies and systems", "practice"],
-        ["Delphi (legacy environment)", "knowledge"]
+        ["Web technologies and systems", "practice"]
       ]
     },
     impact: {
       title: "Results & impact",
-      intro: "What changed after each delivery. These are project results built by the team; my own contribution is described in each case.",
+      intro: "Projects that changed routines, strengthened controls and delivered operational and financial improvements. The results were built as a team; my role in each one is described in the cases.",
       questions: ["What changed?", "Which problem was solved?", "What benefit was created?", "What was my contribution?"],
       filterAll: "All dimensions",
       filterLabel: "Impact dimensions",
@@ -943,7 +945,7 @@ window.CONTENT = {
       dims: {
         legacy: [["tech"], ["ops", "tech"], ["adoption", "tech"], ["adoption"]],
         scheduling: [["tech"], ["fin"], ["tech"], ["ops"]],
-        services: [["gov"], ["gov"], ["fin", "gov"], ["fin"], ["adoption"], ["ops"]],
+        services: [["gov"], ["gov"], ["fin", "gov"], ["fin"], ["adoption"]],
         digitization: [["ops", "gov"], ["ops"], ["gov"], ["tech", "ops"], ["fin"]]
       },
       seeCase: "View case"
